@@ -14,10 +14,7 @@ app = FastAPI()
 # CORS - allows Next.js frontend to talk to this backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "https://hirepilot-ai-xxxx.vercel.app",  # your actual URL here
-    ],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
