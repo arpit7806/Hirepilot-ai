@@ -119,7 +119,7 @@ export default function Hero({ onResult, onLoading }: HeroProps) {
     formData.append("resume", file);
     formData.append("job_description", jobDescription);
     try {
-      const res = await fetch("http://127.0.0.1:8000/analyze", { method: "POST", body: formData });
+      const res = await fetch("https://hirepilot-ai-f8ee.onrender.com/analyze", { method: "POST", body: formData });
       const data = await res.json();
       onResult(data);
     } catch {
